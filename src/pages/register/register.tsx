@@ -1,13 +1,16 @@
 import React from 'react';
+import { Container, RegisterBox } from "./styled"
 
 interface ModalProps {
   onClose: any
 }
 const Register: React.FC<ModalProps> = ({onClose}) => {
   return (
-    <div>
-        Register
-    </div>
+    <Container>
+        <div>
+
+        </div>
+    </Container>
   );
 }
 
