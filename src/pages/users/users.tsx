@@ -11,7 +11,7 @@ const Users = () => {
           <div className='users'></div>
           
           <div>
-            <button onClick={() => setShowModal(true)}>Register</button>
+            <button onClick={() => setShowModal(true)}>New User</button>
             {showModal ? <Register onClose={() => setShowModal(false)}/> : null}
           </div>
         </div>

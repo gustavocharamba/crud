@@ -11,7 +11,7 @@ export const Container = styled.div`
     #user_box {
         height: 85%;
         width: 45%;
-        border-radius: 24px;
+        border-radius: 7%;
         background-color: ${colors.ultra_violet};
 
         display: flex;
