@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Register = () => {
+interface ModalProps {
+  onClose: any
+}
+const Register: React.FC<ModalProps> = ({onClose}) => {
   return (
     <div>
         Register

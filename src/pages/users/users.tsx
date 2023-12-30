@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Container } from './styled'
+import Register from '../register/register';
 
 const Users = () => {
+
+  const [showModal, setShowModal] = useState(false)
   return (
-    <div>
-        Users
-    </div>
+    <Container>
+        <div id='user_box'>
+          <div className='users'></div>
+          
+          <div>
+            <button onClick={() => setShowModal(true)}>Register</button>
+            {showModal ? <Register onClose={() => setShowModal(false)}/> : null}
+          </div>
+        </div>
+    </Container>
   );
 }
 
