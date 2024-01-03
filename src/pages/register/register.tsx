@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Form, Input, Button } from "./styled"
+import { Container, Form, Input, Button, IconBox, Icon } from "./styled"
+import { FaWindowClose } from "react-icons/fa";
 
 interface ModalProps {
   onClose: any
@@ -16,6 +17,11 @@ const Register: React.FC<ModalProps> = ({onClose}) => {
     <Container>
         <div>
           <Form>
+            <IconBox>
+              <button>
+                <FaWindowClose style={Icon}/>
+              </button>
+            </IconBox>
             <h4>Name</h4>
             <Input></Input>
             <h4>City</h4>

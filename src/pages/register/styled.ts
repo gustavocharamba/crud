@@ -54,5 +54,24 @@ export const Button = styled.button`
     height: 10%;
     width: 55%;
     border-radius: 32px;
+    border-style: solid;
 
 `
+
+export const IconBox = styled.div`
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    
+    & > button{
+        width: 15%;
+        height: 100%;
+        background-color: transparent   ;
+        border: 0;
+    }
+`
+export const Icon = {
+    "color": "white",
+}
