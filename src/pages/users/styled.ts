@@ -46,22 +46,26 @@ export const Container = styled.div`
                         justify-content: center;
                         flex-direction: column;
                     }
-
-                    & > button {
-                        width: 50%;
-                        height: 20%;
-                        border: 0;
-                        background: transparent;
-                    }
                 }
             }
         }
-
     }
 `
-export const Content_box = styled.div`
+export const ButtonsBox = styled.div`
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > button {
+        width: 25%;
+        height: 30%;
+        border: 0;
+        background: transparent;
+    }
 `
-export const ButtonBox = styled.div`
+export const RegisterButtonBox = styled.div`
     width: 20%;
     height: 10%;
     display: flex;

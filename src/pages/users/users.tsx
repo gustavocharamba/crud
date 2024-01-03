@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import { Container, Button, ButtonBox} from './styled'
+import { Container, Button, RegisterButtonBox, ButtonsBox} from './styled'
 import Register from '../register/register';
 import { FaDeleteLeft } from "react-icons/fa6";
+import { FaRegEdit } from "react-icons/fa";
+import Update from '../update/update';
 
 const Users = () => {
 
-  const [showModal, setShowModal] = useState(false)
+  const [showModalRegister, setShowModalRegister] = useState(false)
+
+  const [showModalUpdate, setShowModalUpdate] = useState(false)
+
 
   return (
     <Container>
@@ -18,17 +23,23 @@ const Users = () => {
                 </div>
                 <div>
                   <p>Rio de Janeiro</p>
-                  <button>
-                    <FaDeleteLeft/>
-                  </button>
+                  <ButtonsBox>
+                    <button>
+                      <FaDeleteLeft/>
+                    </button>
+                    <button onClick={() => setShowModalUpdate(true)}>
+                      {showModalUpdate ? <Update onClose={() => setShowModalUpdate(false)}/> : null}
+                      <FaRegEdit/>
+                    </button>
+                  </ButtonsBox>
                 </div>
             </div>
           </div>
           
-          <ButtonBox>
-            <Button onClick={() => setShowModal(true)}>New User</Button>
-            {showModal ? <Register onClose={() => setShowModal(false)}/> : null}
-          </ButtonBox>
+          <RegisterButtonBox>
+            <Button onClick={() => setShowModalRegister(true)}>New User</Button>
+            {showModalRegister ? <Register onClose={() => setShowModalRegister(false)}/> : null}
+          </RegisterButtonBox>
         </div>
     </Container>
   );
