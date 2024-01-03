@@ -8,7 +8,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    #user_box {
+    & > div {
         height: 85%;
         width: 45%;
         border-radius: 7%;
@@ -19,5 +19,60 @@ export const Container = styled.div`
         justify-content: center;
         flex-direction: column;
 
+        & > #users_box {
+            width: 85%;
+            height: 75%;
+            margin-bottom: 20px;
+
+            & > .users {
+                width: 100%;
+                height: 25%;
+                border: 1px;
+                border-color: ${colors.dark_purple};
+                border-style: solid;
+                display: flex;
+                & > div {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    & > p {
+                        height: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+
+                    & > button {
+                        width: 50%;
+                        height: 20%;
+                        border: 0;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+
     }
+`
+export const Content_box = styled.div`
+`
+export const ButtonBox = styled.div`
+    width: 20%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+export const Button = styled.button`
+    width: 95%;
+    height: 75%;
+    border-radius: 24px;
+    border-width: 0;
+    border-style: solid;
+
 `
